@@ -1,67 +1,132 @@
-<!DOCTYPE html><html lang="fr">
+<!DOCTYPE html>
+<html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CodeLevel | NovaTech</title>
+
+    <title>CodeLevel</title>
+
     <link rel="stylesheet" href="site1.css">
 </head>
-<body><header class="header">
-    <h1>CodeLevel</h1>
-    <p>Découvre ton niveau en programmation !</p>
-</header>
 
-<main>
-    <section class="code-editor">
-        <h2>Évalue ton code</h2>
+<body>
+    <!-- EN-TÊTE -->
+    <header class="header">
 
-        <form id="evaluation-form">
-            <label for="name">Ton nom :</label>
-            <input type="text" id="name" required>
+        <h1>CodeLevel</h1>
 
-            <label for="email">Ton adresse e-mail :</label>
-            <input type="email" id="email" required>
+        <p>
+            Évalue ton niveau en programmation
+        </p>
 
-            <label for="language">Langage de programmation :</label>
-            <select id="language" required>
-                <option value="">Choisir un langage</option>
-                <option value="html">HTML</option>
-                <option value="css">CSS</option>
-                <option value="javascript">JavaScript</option>
-                <option value="python">Python</option>
-                <option value="java">Java</option>
-                <option value="php">PHP</option>
-            </select>
+    </header>
 
-            <label for="experience">Ton expérience :</label>
-            <select id="experience" required>
-                <option value="">Choisir ton expérience</option>
-                <option value="debutant">Débutant</option>
-                <option value="intermediaire">Intermédiaire</option>
-                <option value="avance">Avancé</option>
-            </select>
 
-            <label for="code">Colle ton code ici :</label>
-            <textarea id="code" class="code-editor" rows="10" required></textarea>
+    <!-- CONTENU PRINCIPAL -->
 
-            <button type="submit" class="evaluate-button">
+    <main>
+
+        <!-- INFORMATIONS DE L'UTILISATEUR -->
+        <section class="user-section">
+
+            <h2>Informations du programmeur</h2>
+
+            <form>
+
+                <label for="name">Nom</label>
+                <input type="text" id="name" placeholder="Votre nom">
+
+
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Votre adresse email">
+
+
+                <label for="language">Langage de programmation</label>
+
+                <select id="language">
+
+                    <option value="">Choisir un langage</option>
+                    <option value="html">HTML</option>
+                    <option value="css">CSS</option>
+                    <option value="javascript">JavaScript</option>
+                    <option value="python">Python</option>
+                    <option value="java">Java</option>
+                    <option value="php">PHP</option>
+
+                </select>
+
+
+                <label for="experience">Années d'expérience</label>
+
+                <input
+                    type="number"
+                    id="experience"
+                    placeholder="Ex : 2"
+                    min="0"
+                >
+
+            </form>
+
+        </section>
+
+
+        <!-- ESPACE CODE -->
+        <section class="code-section">
+
+            <h2>Votre code</h2>
+
+            <textarea
+                class="code-editor"
+                placeholder="Écrivez ou collez votre code ici..."
+            ></textarea>
+
+            <button class="evaluate-button">
                 Évaluer mon code
             </button>
-        </form>
-    </section>
 
-    <section class="result-box">
-        <h2>Résultat</h2>
-        <p>Niveau : <span class="level">En attente</span></p>
-        <p>Score : <span class="score">--/100</span></p>
-        <p class="message">Ton résultat apparaîtra ici.</p>
-    </section>
-</main>
+        </section>
 
-<footer>
-    <p>&copy; 2026 NovaTech — CodeLevel</p>
-</footer>
 
+        <!-- RÉSULTAT -->
+        <section class="result-section">
+
+            <h2>Résultat</h2>
+
+            <div class="result-box">
+
+                <p class="result-title">
+                    Votre niveau
+                </p>
+
+                <p class="level">
+                    En attente...
+                </p>
+
+                <p class="score">
+                    Score : -- / 100
+                </p>
+
+                <p class="message">
+                    Votre résultat apparaîtra ici après l'évaluation.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- PIED DE PAGE -->
+    <footer>
+
+        <p><marquee>
+            © NovaTech - des idées neuves, un engagement concret
+        </marquee></p>
+
+    </footer>
 <script src="script.js"></script>
-
 </body>
-  </html>
+
+</html>
